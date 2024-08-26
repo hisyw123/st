@@ -1,0 +1,138 @@
+/* Reset some default styles */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 기본적인 설정 추가 */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Wrapper 수정 */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    margin-top: 70px; /* Adjust this value according to the navbar height */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    width: 15%;
+    padding: 20px;
+}
+
+/* Blog Post Area */
+.blog-post {
+    width: 70%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Markdown-like styling for blog content */
+.blog-post h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.blog-post p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 15%;
+    padding: 20px;
+}
+
+.profile-background {
+    background-image: url('../images/background.jpg'); /* 배경 이미지 파일 경로 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.profile-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 검은색 투명 레이어 */
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.profile-background p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #b77474;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
